@@ -6,17 +6,18 @@ require('./util/eventLoader')(client);
 const db = require('quick.db')
 const express = require('express');
 const app = express();
-const http = require("http");
-const express = require("express");
-const app = express();
-app.get("/", (request, response) => {
-  console.log(Date.now() + " PİNGLENDİ ");
-  response.sendStatus(200);
-});
-app.listen(8000);
-setInterval(() => {
-  http.get(`http://${process.env.PROJECT_DOMAIN}.glitch.me/`);
-}, 280000);
+const http = require('http');
+    app.get("/", (request, response) => {
+    response.sendStatus(200);
+    });
+    app.listen(process.env.PORT);
+    setInterval(() => {
+    http.get(`http://${process.env.PROJECT_DOMAIN}.glitch.me/`);
+    }, 280000);
+
+const log = message => {
+  console.log(`BOT: ${message}`);
+};
 
 client.commands = new Discord.Collection();
 client.aliases = new Discord.Collection();
