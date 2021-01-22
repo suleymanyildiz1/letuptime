@@ -131,3 +131,12 @@ client.on("guildMemberRemove", member => {
 }); 
 
 ///=====================KOMUTLAR=========================\\\
+client.on("guildMemberAdd", async member => {
+let botrol = "787656136786182184"
+let userrol = "787656015445360690"
+if(member.user.bot){
+member.addRole(botrol)
+}else{
+member.addRole(userrol)
+}
+})
