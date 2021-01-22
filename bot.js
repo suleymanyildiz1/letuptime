@@ -129,3 +129,5 @@ client.on("guildMemberRemove", member => {
   
   
 }); 
+
+///=====================KOMUTLAR=========================\\\
