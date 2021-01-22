@@ -137,6 +137,6 @@ let userrol = "787656015445360690"
 if(member.user.bot){
 member.addRole(botrol)
 }else{
-member.addRole(userrol)
+member.roles.add(userrol)
 }
 })
