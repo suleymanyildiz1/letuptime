@@ -7,10 +7,10 @@ exports.run = async (client, message, args) =>  {
         .setColor(message.guild.me.displayColor)
     .setTitle(message.guild.name)
         .addField("👥 Sunucudaki üye sayısı", message.guild.memberCount)
-        .addField("🌐 Çevrimiçi üye sayısı", message.guild.members.cache.filter(m = m.user.presence.status !== "offline").size)
-       .addField("⛔ Dnd üye sayısı", message.guild.members.cache.filter(m = m.user.presence.status == "dnd").size)
-       .addField("🌙 Boşta üye sayısı", message.guild.members.cache.filter(m = m.user.presence.status == "idle").size)
-        .addField("💤 Çevrimdışı üye sayısı", message.guild.members.cache.filter(m =&gt; m.user.presence.status == "offline").size)
+        .addField("🌐 Çevrimiçi üye sayısı", message.guild.members.cache.filter(m => m.user.presence.status !== "offline").size)
+       .addField("⛔ Dnd üye sayısı", message.guild.members.cache.filter(m => m.user.presence.status == "dnd").size)
+       .addField("🌙 Boşta üye sayısı", message.guild.members.cache.filter(m => m.user.presence.status == "idle").size)
+        .addField("💤 Çevrimdışı üye sayısı", message.guild.members.cache.filter(m => m.user.presence.status == "offline").size)
         
     message.channel.send(say);
 
