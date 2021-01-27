@@ -137,3 +137,24 @@ client.on("guildMemberRemove", member => {
       else 
       member.roles.add('787656015445360690')//üye id
       });
+
+///=====================BOOST============================\\\
+//////// - BOOST ÇEKİNCE MESAJ
+client.on('guildMemberUpdate', async(oldMember, newMember) => {
+
+if(oldMember.roles.has('802174574480719893')) {
+
+if(!newMember.roles.has('802174574480719893')) return client.channels.get('801510281515630624').send(newMember.user.tag + ' | Boostunu çekti ! ')
+
+}}
+)
+
+//////// - boost basınca mesaj
+client.on('guildMemberUpdate', async(oldMember, newMember) => {
+
+if(!oldMember.roles.has('802174574480719893')) {
+
+if(newMember.roles.has('802174574480719893')) return client.channels.get('801510281515630624').send(newMember.user.tag + ' | Boost Bastı ! ')
+
+}}
+)
